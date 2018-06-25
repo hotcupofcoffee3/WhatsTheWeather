@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatsTheWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="DpO-AZ-vYz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rc2-gm-qC0">
+                                <rect key="frame" x="37" y="60" width="300" height="50"/>
+                                <color key="backgroundColor" red="0.19189200129533679" green="0.19189200129533679" blue="0.19189200129533679" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OKp-iX-5Qm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="vAG-Vt-uEf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city (e.g., London)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m9s-8n-VW7">
+                                <rect key="frame" x="20" y="150" width="335" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FA4-eo-69v">
+                                <rect key="frame" x="125.5" y="220" width="124" height="36"/>
+                                <color key="backgroundColor" red="0.38343951106071472" green="0.54005521535873413" blue="0.053377009928226471" alpha="0.75121038732394363" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Show weather">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showWeatherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yP0-1c-YL6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here's your forecast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLb-qB-lkn">
+                                <rect key="frame" x="20" y="316" width="335" height="21"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.97619047619047616" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eLb-qB-lkn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0dT-1A-3CB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DpO-AZ-vYz" secondAttribute="trailing" id="1gz-S6-84z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eLb-qB-lkn" secondAttribute="trailing" constant="20" id="M7e-F6-vYp"/>
+                            <constraint firstItem="m9s-8n-VW7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Nd8-LX-WaE"/>
+                            <constraint firstItem="FA4-eo-69v" firstAttribute="top" secondItem="m9s-8n-VW7" secondAttribute="bottom" constant="40" id="SPX-Tv-SXG"/>
+                            <constraint firstItem="Rc2-gm-qC0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Swb-S0-F7B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DpO-AZ-vYz" secondAttribute="bottom" id="bBy-JF-lPD"/>
+                            <constraint firstItem="FA4-eo-69v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fDR-SG-aqY"/>
+                            <constraint firstItem="eLb-qB-lkn" firstAttribute="top" secondItem="FA4-eo-69v" secondAttribute="bottom" constant="60" id="iSh-ce-rqP"/>
+                            <constraint firstItem="DpO-AZ-vYz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kg2-l1-mCe"/>
+                            <constraint firstItem="Rc2-gm-qC0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="rL3-1h-8Ke"/>
+                            <constraint firstItem="m9s-8n-VW7" firstAttribute="top" secondItem="Rc2-gm-qC0" secondAttribute="bottom" constant="40" id="sQr-TG-y87"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m9s-8n-VW7" secondAttribute="trailing" constant="20" id="viM-s8-qTl"/>
+                            <constraint firstItem="DpO-AZ-vYz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wr1-Pd-jV2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="forecastLabel" destination="eLb-qB-lkn" id="oPm-5M-fxB"/>
+                        <outlet property="weatherTextField" destination="m9s-8n-VW7" id="EiO-Ne-pLX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="2000" height="1333"/>
+    </resources>
+</document>
